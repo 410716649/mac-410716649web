@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace web.Controllers
 {
-    public class HomeController : Controller
+    public class testController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult HW2()
         {
             return View();
         }
