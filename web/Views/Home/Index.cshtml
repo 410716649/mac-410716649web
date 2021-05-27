@@ -1,34 +1,34 @@
 ﻿
 @{
-    ViewBag.Title = "HW2";
+    ViewBag.Title = "HW3";
 }
 
+@{string[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" }; }
+<ol>
+    @foreach (var item in fruits)
+    {
+       
+            <li>@item</li>
+
+            }
+        </ol>
+    <h2>HW3</h2>
 
 
-<p>印出fruits</p>
-@for(int i=1;i<=10;i++)
-{
-<p>@i</p>
-}
-
-
-<h2>HW3</h2>
-
-
-<p>姓名：@Html.TextBox("name")</p>
-<p>帳號：@Html.TextBox("account")</p>
-<p>密碼：@Html.TextBox("password")</p>
-<p>
-    性別：
-    @Html.RadioButton("gender", "A")男生
-    @Html.RadioButton("gender", "B")女生
-</p>
-<p>
-    興趣：
-    @Html.CheckBox("reading", "R")閱讀
-    @Html.CheckBox("swimming", "S")游泳
-</p>
-<p>
-    自我介紹：
-    @Html.TextArea("about")
-</p>
+    <p>姓名：@Html.TextBox("name")</p>
+    <p>帳號：@Html.TextBox("account")</p>
+    <p>密碼：@Html.TextBox("password")</p>
+    <p>
+        性別：
+        @Html.RadioButton("gender", "A")男生
+        @Html.RadioButton("gender", "B")女生
+    </p>
+    <p>
+        興趣：
+        @Html.CheckBox("reading", "R")閱讀
+        @Html.CheckBox("swimming", "S")游泳
+    </p>
+    <p>
+        自我介紹：
+        @Html.TextArea("about")
+    </p>
