@@ -1,34 +1,17 @@
 ﻿
 @{
-    ViewBag.Title = "HW3";
+    ViewBag.Title = "Index";
 }
 
-@{string[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" }; }
-<ol>
-    @foreach (var item in fruits)
-    {
-       
-            <li>@item</li>
-
-            }
-        </ol>
-    <h2>HW3</h2>
+<h2>喝水建議量</h2>
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
 
 
-    <p>姓名：@Html.TextBox("name")</p>
-    <p>帳號：@Html.TextBox("account")</p>
-    <p>密碼：@Html.TextBox("password")</p>
-    <p>
-        性別：
-        @Html.RadioButton("gender", "A")男生
-        @Html.RadioButton("gender", "B")女生
-    </p>
-    <p>
-        興趣：
-        @Html.CheckBox("reading", "R")閱讀
-        @Html.CheckBox("swimming", "S")游泳
-    </p>
-    <p>
-        自我介紹：
-        @Html.TextArea("about")
-    </p>
+    <p>姓名: @Html.TextBox("name")</p>
+    <p>體重: @Html.TextBox("weight")</p>
+    <p>Hi,@ViewBag.name,  建議喝水量:@ViewBag.result</p>
+
+    <input type="submit" value="送出" />
+}
+

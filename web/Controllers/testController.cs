@@ -11,7 +11,7 @@ namespace web.Controllers
     public class testController : Controller
     {
         // GET: /<controller>/
-        public IActionResult HW2()
+        public IActionResult HW1()
         {
             return View();
         }

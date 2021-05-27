@@ -11,8 +11,17 @@ namespace web.Controllers
     public class HomeController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(string name, float?weight)
         {
+            var result = "";
+            if (weight.HasValue)
+            {
+                result = (weight * 30) + "cc";
+            }
+
+            ViewBag.name = name;
+            ViewBag.Result = result;
+
             return View();
         }
     }
